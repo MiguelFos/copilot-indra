@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Una página web sencilla, clara y creativa.">
+  <title>Rincón Creativo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Rincón Creativo, inicio">
+      <span class="brand-mark">R</span>
+      <span>Rincón Creativo</span>
+    </a>
+    <nav aria-label="Navegación principal">
+      <a href="#ideas">Ideas</a>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a class="nav-button" href="#contacto">Hablemos</a>
+    </nav>
+  </header>
+
+  <main id="inicio">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Pequeñas ideas, grandes comienzos</p>
+        <h1>Haz espacio para lo que te <em>inspira.</em></h1>
+        <p class="hero-text">Un lugar para compartir proyectos, aprendizajes y esas ideas que merecen convertirse en algo real.</p>
+        <button class="primary-button" id="inspire-button" type="button">Dame inspiración <span aria-hidden="true">→</span></button>
+        <p class="inspiration" id="inspiration-message" aria-live="polite">Tu próxima idea puede empezar hoy.</p>
+      </div>
+      <div class="hero-art" aria-label="Ilustración decorativa de una bombilla entre hojas" role="img">
+        <div class="sun"></div>
+        <div class="leaf leaf-one"></div>
+        <div class="leaf leaf-two"></div>
+        <div class="bulb"><span></span></div>
+        <div class="stem"></div>
+      </div>
+    </section>
+
+    <section class="ideas-section" id="ideas">
+      <div class="section-heading">
+        <p class="eyebrow">Para empezar</p>
+        <h2>Tres formas de avanzar</h2>
+      </div>
+      <div class="idea-grid">
+        <article class="idea-card coral-card">
+          <span class="card-number">01</span>
+          <h3>Curiosidad</h3>
+          <p>Haz una pregunta nueva y sigue el hilo hasta descubrir algo inesperado.</p>
+        </article>
+        <article class="idea-card blue-card">
+          <span class="card-number">02</span>
+          <h3>Práctica</h3>
+          <p>Convierte la teoría en un pequeño experimento que puedas terminar hoy.</p>
+        </article>
+        <article class="idea-card yellow-card">
+          <span class="card-number">03</span>
+          <h3>Constancia</h3>
+          <p>Vuelve mañana. Los proyectos crecen cuando les das un poco de tiempo.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="about-section" id="sobre-mi">
+      <div>
+        <p class="eyebrow">Una nota personal</p>
+        <h2>Crear también es una forma de escucharse.</h2>
+      </div>
+      <p>Esta página es un punto de partida: cambia los textos, los colores y las ideas para hacerla completamente tuya.</p>
+    </section>
+  </main>
+
+  <aside class="analog-clock" aria-label="Reloj analógico">
+    <span class="clock-number number-12">12</span>
+    <span class="clock-number number-3">3</span>
+    <span class="clock-number number-6">6</span>
+    <span class="clock-number number-9">9</span>
+    <span class="clock-hand clock-hour" id="clock-hour"></span>
+    <span class="clock-hand clock-minute" id="clock-minute"></span>
+    <span class="clock-hand clock-second" id="clock-second"></span>
+    <span class="clock-center"></span>
+  </aside>
+
+  <footer id="contacto">
+    <span>© 2026 Rincón Creativo</span>
+    <a href="mailto:hola@rinconcreativo.es">hola@rinconcreativo.es</a>
+  </footer>
+</body>
+</html>
