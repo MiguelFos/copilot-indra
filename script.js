@@ -18,7 +18,7 @@ inspirationButton.addEventListener('click', () => {
   inspirationMessage.textContent = nextMessage;
 });
 
-// Reloj analógico
+// Reloj analógico 
 const clockHour = document.querySelector('#clock-hour');
 const clockMinute = document.querySelector('#clock-minute');
 const clockSecond = document.querySelector('#clock-second');
