@@ -1,4 +1,4 @@
-// Documenta cada función del archivo script.js
+// Interactive inspiration messages
 
 const inspirationButton = document.querySelector('#inspire-button');
 const inspirationMessage = document.querySelector('#inspiration-message');
@@ -18,12 +18,12 @@ inspirationButton.addEventListener('click', () => {
   inspirationMessage.textContent = nextMessage;
 });
 
-// Reloj analógico 
+// Analog clock
 const clockHour = document.querySelector('#clock-hour');
 const clockMinute = document.querySelector('#clock-minute');
 const clockSecond = document.querySelector('#clock-second');
 
-// Actualiza el reloj cada segundo
+// Update the clock every second
 function updateClock() {
   const now = new Date();
   const seconds = now.getSeconds();
