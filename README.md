@@ -10,6 +10,7 @@ La página presenta un espacio creativo con:
 - Navegación interna hacia las secciones de ideas, información y contacto.
 - Tres tarjetas con formas de avanzar en un proyecto.
 - Botón interactivo que muestra mensajes de inspiración aleatorios.
+- Selector de seis temas visuales que recuerda la elección.
 - Reloj analógico fijo en la esquina inferior derecha.
 - Diseño adaptable para ordenador, tablet y móvil.
 
@@ -31,6 +32,7 @@ También puedes abrir la carpeta en Visual Studio Code y usar una extensión com
 
 ## Personalización
 
+- Elige un tema desde la navegación; la selección se conserva en el navegador.
 - Cambia los textos y enlaces en `index.html`.
 - Modifica los colores y tamaños en las variables de `styles.css`.
 - Añade o sustituye frases en el array `messages` de `script.js`.

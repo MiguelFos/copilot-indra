@@ -1,5 +1,29 @@
 // Interactive inspiration messages
 
+const themeSelect = document.querySelector('#theme-select');
+const themeStorageKey = 'rinconCreativoTheme';
+const availableThemes = ['original', 'jardin', 'oceano', 'atardecer', 'lavanda', 'noche'];
+let selectedTheme = 'original';
+
+try {
+  const savedTheme = localStorage.getItem(themeStorageKey);
+  if (availableThemes.includes(savedTheme)) {
+    selectedTheme = savedTheme;
+  }
+} catch {}
+
+document.documentElement.dataset.theme = selectedTheme;
+themeSelect.value = selectedTheme;
+
+themeSelect.addEventListener('change', () => {
+  selectedTheme = themeSelect.value;
+  document.documentElement.dataset.theme = selectedTheme;
+
+  try {
+    localStorage.setItem(themeStorageKey, selectedTheme);
+  } catch {}
+});
+
 const inspirationButton = document.querySelector('#inspire-button');
 const inspirationMessage = document.querySelector('#inspiration-message');
 

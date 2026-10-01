@@ -10,6 +10,67 @@
   --white: #ffffff;
 }
 
+:root[data-theme="jardin"] {
+  --ink: #20312a;
+  --muted: #58675e;
+  --paper: #f4f3e9;
+  --coral: #d8755b;
+  --coral-dark: #a94f3d;
+  --blue: #96c4b2;
+  --yellow: #e9c96c;
+  --line: #d8ddd2;
+  --white: #ffffff;
+}
+
+:root[data-theme="oceano"] {
+  --ink: #1c2c32;
+  --muted: #596a6c;
+  --paper: #eff4f1;
+  --coral: #db725c;
+  --coral-dark: #a94e40;
+  --blue: #91c5c9;
+  --yellow: #ebc969;
+  --line: #d5dfdc;
+  --white: #ffffff;
+}
+
+:root[data-theme="atardecer"] {
+  --ink: #302824;
+  --muted: #6d625c;
+  --paper: #f8f1e8;
+  --coral: #e07a5f;
+  --coral-dark: #b35342;
+  --blue: #a9c8c6;
+  --yellow: #edc66b;
+  --line: #e3d7cc;
+  --white: #ffffff;
+}
+
+:root[data-theme="lavanda"] {
+  --ink: #292936;
+  --muted: #62616d;
+  --paper: #f3f1f5;
+  --coral: #d87565;
+  --coral-dark: #a84f47;
+  --blue: #aebbd0;
+  --yellow: #e4c77c;
+  --line: #ddd9e2;
+  --white: #ffffff;
+}
+
+:root[data-theme="noche"] {
+  color-scheme: dark;
+  --ink: #f3eee4;
+  --muted: #c3c7c0;
+  --paper: #1b2423;
+  --coral: #91433c;
+  --coral-dark: #f0a18e;
+  --blue: #315d63;
+  --yellow: #6a5424;
+  --line: #46514c;
+  --white: #ffffff;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -25,6 +86,11 @@ body {
   color: var(--ink);
   font-family: "DM Sans", sans-serif;
   line-height: 1.5;
+}
+
+:focus-visible {
+  outline: 3px solid var(--coral-dark);
+  outline-offset: 3px;
 }
 
 .site-header,
@@ -70,6 +136,72 @@ nav {
   align-items: center;
   display: flex;
   gap: 28px;
+}
+
+.theme-control {
+  align-items: center;
+  color: var(--muted);
+  display: flex;
+  font-size: 0.8rem;
+  gap: 8px;
+}
+
+.theme-select {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  color: var(--ink);
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.84rem;
+  max-width: 150px;
+  padding: 7px 9px;
+}
+
+:root[data-theme="noche"] h1 em {
+  color: var(--coral-dark);
+}
+
+:root[data-theme="noche"] .primary-button {
+  background: #f3eee4;
+  color: #182321;
+}
+
+:root[data-theme="noche"] .primary-button:hover,
+:root[data-theme="noche"] .nav-button:hover {
+  color: #182321;
+}
+
+:root[data-theme="noche"] .analog-clock {
+  --ink: #182321;
+  --coral: #e36b55;
+  --coral-dark: #b84f3e;
+}
+
+:root[data-theme="noche"] .analog-clock .clock-number {
+  color: var(--ink);
+}
+
+@media (max-width: 700px) {
+  .site-header {
+    flex-wrap: wrap;
+    row-gap: 14px;
+  }
+
+  nav {
+    flex-basis: 100%;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: space-between;
+  }
+
+  .theme-control {
+    margin-left: auto;
+  }
+
+  .theme-select {
+    max-width: 140px;
+  }
 }
 
 nav a,
